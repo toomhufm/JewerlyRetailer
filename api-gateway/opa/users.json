@@ -1,0 +1,10 @@
+{
+    "user_attributes": {
+        "duc": {
+            "user_role": "abc",
+            "department": "finance",
+            "location": "New York",
+            "tags": ["updateInformation", "abc"]
+        }
+    }
+}

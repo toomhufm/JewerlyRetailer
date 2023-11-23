@@ -1,0 +1,24 @@
+version: '3'
+services:
+  served-html-service:
+    restart: always
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/api-gateway
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - served-html-service
+  opa:
+    ports:
+      - 8181:8181
+    build: 
+      context: ./opa
