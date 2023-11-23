@@ -1,2 +1,1 @@
-# JewerlyRetailer
-Web Application for Jewerly Retailer Shop
+# An Online Jewerly Shop With High Security
