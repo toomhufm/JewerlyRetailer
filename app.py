@@ -23,17 +23,17 @@ def register():
 # Route for the root URL ("/")
 @app.route('/', methods=['GET'])
 def main_page():
-    return render_template('index.html', title="Jelwery")
+    return render_template('index.html', title="Jelwery", active_page="main")
 
 # Route for /products/
 @app.route('/products/', methods=['GET'])
 def product_page():
-    return render_template('products.html', title="Products")
+    return render_template('products.html', title="Products", active_page="product")
 
 # Route for /contact
 @app.route('/contact/', methods=['GET'])
 def contact_page():
-    return render_template('contact.html', title="Contact")
+    return render_template('contact.html', title="Contact", active_page="contact")
 
 
 ALLOWED_EXTENSIONS = {'webp', 'jpg', 'jpeg', 'png'}
@@ -50,7 +50,7 @@ def server_image(file_name):
 
 @app.route('/about/', methods=['GET'])
 def about_page():
-    return render_template('about.html', title="About us")
+    return render_template('about.html', title="About us", active_page="about")
 
 @app.route('/cart/', methods=['GET'])
 def cart_page():    
