@@ -18,10 +18,10 @@
     <a href="{{ url_for('main_page') }}" class="logo"> <i class="fas fa-gem"></i> Jelwery </a>
 
     <nav class="navbar">
-        <a href="{{ url_for('main_page') }}" class="active">Trang Chủ</a>
-        <a href="{{ url_for('product_page') }}">Sản Phẩm</a>
-        <a href="{{ url_for('about_page') }}">Về Chúng Tôi</a>
-        <a href="{{ url_for('contact_page') }}">Liên Hệ</a>
+        <a href="{{ url_for('main_page') }}" {% if active_page == 'main' %}class="active"{% endif %}>Trang Chủ</a>
+        <a href="{{ url_for('product_page') }}" {% if active_page == 'product' %}class="active"{% endif %}>Sản Phẩm</a>
+        <a href="{{ url_for('about_page') }}" {% if active_page == 'about' %}class="active"{% endif %}>Về Chúng Tôi</a>
+        <a href="{{ url_for('contact_page') }}" {% if active_page == 'contact' %}class="active"{% endif %}>Liên Hệ</a>
         <div class="blog-container">
             <a href="#blogs">Blogs</a>
             <div class="multi-level">

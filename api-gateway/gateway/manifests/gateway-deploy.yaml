@@ -21,6 +21,7 @@ spec:
       containers:
         - name: gateway
           image: xuanhoangf/gateway:lastest
+          ImagePullPolicy: Always
           ports:
             - name: gateway
               containerPort: 8000

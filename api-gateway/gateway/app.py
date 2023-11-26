@@ -54,7 +54,7 @@ def register():
 # Route for the root URL ("/")
 @app.route('/', methods=['GET'])
 def main_page():
-    return render_template('index.html', title="Jelwery")
+    return render_template('index.html', title="Jelwery", active_page="main")
 
 # Route for /products/
 @app.route('/products/', methods=['GET'])
@@ -70,12 +70,12 @@ def product_page():
     print(products)
     file_path = f"./static/json/products.json"
     dump(products, open(file_path,'w'))
-    return render_template('products.html', title="Products")
+    return render_template('products.html', title="Products", active_page="product")
 
 # Route for /contact
 @app.route('/contact/', methods=['GET'])
 def contact_page():
-    return render_template('contact.html', title="Contact")
+    return render_template('contact.html', title="Contact", active_page="contact")
 
 @app.route('/json/<json_name>')
 def get_json_data(json_name):
@@ -103,7 +103,7 @@ def about_page():
     api_url = f"http://{os.getenv('ABOUT_SVC_ADDRESS')}/api/getAbout"
     response = requests.get(api_url)
     data = response.json()
-    return render_template('about.html', title="About us", about_list=loads(data))
+    return render_template('about.html', title="About us", about_list=loads(data), active_page="about")
 
 @app.route('/cart/', methods=['GET'])
 def cart_page():    
