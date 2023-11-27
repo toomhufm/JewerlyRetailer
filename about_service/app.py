@@ -59,19 +59,19 @@ def insert_about():
         {
             'id': 21522000,
             'name': 'Hoang',
-            'email': '2152xxxx@gm.uit.edu.vn',
+            'email': '21522090@gm.uit.edu.vn',
             'description': 'I am a web developer with expertise in Flask and SQLAlchemy.'
         },
         {
             'id': 21522001,
             'name': 'Duc',
-            'email': '2152xxxx@gm.uit.edu.vn',
+            'email': '21521964@gm.uit.edu.vn',
             'description': 'I specialize in frontend development and UI/UX design.'
         },
         {
             'id': 21522002,
-            'name': 'Duc',
-            'email': '2152xxxx@gm.uit.edu.vn',
+            'name': 'Thanh',
+            'email': '21521450@gm.uit.edu.vn',
             'description': 'I am a web developer with expertise in Flask and SQLAlchemy.'
         }
     ]
